@@ -105,10 +105,11 @@ class Client {
     const client = new HyperdriveClient()
     await client.ready()
 
+    // This saves the key to a local file to not create new
+    // drives for each benchmark run.
     const keyFile = p.join(__dirname, '.client-drive-key')
     try { var key = fs.readFileSync(keyFile) } catch (e) {}
 
-    // TODO: Don't create a new drive all the time.
     const { opts, id } = await client.drive.get({ key })
 
     if (!key) fs.writeFileSync(keyFile, opts.key)
