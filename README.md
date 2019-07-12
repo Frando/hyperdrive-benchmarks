@@ -2,12 +2,9 @@
 
 A few simple benchmarks for hyperdrive.
 
+## `node bench.js`
+
 ```
-
-de bench.js
-
----
-
 NANOBENCH version 2
 > /usr/bin/node bench.js
 >
